@@ -158,4 +158,21 @@ h1 {
     max-width: 90%;
   }
 }
+.note {
+  background-color: #f8d7da; /* Light red background */
+  color: #721c24; /* Dark red text */
+  border: 1px solid #f5c6cb; /* Red border */
+  border-radius: 0.25rem; /* Rounded corners */
+  padding: 1rem; /* Padding around the content */
+  margin-bottom: 1rem; /* Spacing at the bottom */
+}
+
+.note p {
+  margin: 0; /* Remove default paragraph margin */
+}
+
+.note strong {
+  font-weight: bold; /* Make the 'Note:' text bold */
+}
+
 
