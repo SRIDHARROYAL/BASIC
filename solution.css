@@ -1,119 +1,146 @@
+/* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    width: 80%;
-    max-width: 800px;
-    margin: 50px auto;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Typography */
+h1, h2, h3 {
+  color: #333;
+  text-align: center;
 }
 
 h1 {
-    text-align: center;
-    color: #333333;
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
 
-.content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
 }
 
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* Payment Plans Section */
+.payment-plans {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.plan {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 30%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.plan:hover {
+  transform: translateY(-10px);
+}
+
+.plan h3 {
+  margin-top: 0;
+  color: #0073e6;
+}
+
+.plan .price {
+  font-size: 2em;
+  color: #0073e6;
+  margin: 10px 0;
+}
+
+.plan ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.plan ul li {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+.plan button {
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.plan button:hover {
+  background-color: #005bb5;
+}
+
+/* Instructions Section */
 .instructions {
-    flex: 1;
-    min-width: 300px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .instructions h2 {
-    color: #555555;
-}
-
-.instructions p {
-    color: #666666;
+  text-align: center;
+  margin-top: 0;
 }
 
 .instructions ol {
-    margin: 20px 0;
-    padding-left: 20px;
-    color: #666666;
+  padding-left: 20px;
 }
 
 .instructions ol li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
+  font-size: 1em;
 }
 
-.instructions a {
-    color: #1a73e8;
-    text-decoration: none;
+.instructions .contact-info p {
+  font-size: 1em;
 }
 
-.instructions a:hover {
-    text-decoration: underline;
-}
-
-.contact-info {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border: 1px solid #dddddd;
-    border-radius: 5px;
-}
-
-.contact-info p {
-    margin: 10px 0;
-    color: #333333;
-}
-
-.contact-info a {
-    color: #1a73e8;
-    text-decoration: none;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
+/* Video Tutorial Section */
 .video-tutorial {
-    flex: 1;
-    min-width: 300px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .video-tutorial h2 {
-    color: #555555;
+  text-align: center;
+  margin-top: 0;
 }
 
-.video-tutorial p {
-    color: #666666;
-}
-
-.video-container {
-    margin-top: 20px;
-    width: 100%;
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 .video-container {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  padding-top: 25px;
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
+  margin-top: 20px;
 }
 
 .video-container iframe {
@@ -123,3 +150,44 @@ h1 {
   width: 100%;
   height: 100%;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .payment-plans {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  .plan .price {
+    font-size: 1.5em;
+  }
+
+  .plan button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+
+  .instructions ol li, .instructions .contact-info p {
+    font-size: 0.9em;
+  }
+}
+
